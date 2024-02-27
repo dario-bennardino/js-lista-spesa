@@ -23,7 +23,30 @@ let numeroArticoli = 0
 //2. incrementa di 1
 //3. il ciclo while finirà quando numeroArticoli sarà = alla lunghezza dell'array listaSpesa
 
-while(numeroArticoli < listaSpesa.length){
-    console.log(listaSpesa[numeroArticoli]);
+//STAMPA IN CONSOLE
+
+// while(numeroArticoli < listaSpesa.length){
+//     console.log(listaSpesa[numeroArticoli]);
+//     numeroArticoli++;
+// }
+
+//STAMPA IN HTML - ALL'INTERNO DI UNA UL 
+
+// Ottenere l'elemento ul
+const elencoSpesaUl = document.getElementById('elenco-spesa');
+
+while (numeroArticoli < listaSpesa.length) {
+    // Creare un nuovo elemento li
+    const nuovoElementoLi = document.createElement('li');
+
+    // Impostare il testo dell'elemento li con l'elemento corrente della lista
+    nuovoElementoLi.textContent = listaSpesa[numeroArticoli];
+
+    // Aggiungere l'elemento li all'elemento ul
+    elencoSpesaUl.appendChild(nuovoElementoLi);
+
     numeroArticoli++;
 }
+
+
+
